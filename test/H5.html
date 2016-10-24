@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src='../js/lib/jquery.js'></script>
+	<script type="text/javascript" src='../js/lib/jquery-ui.min.js'></script>
+	<script type="text/javascript" src='../js/lib/jquery.fullPage.js'></script>
+	<link rel="stylesheet" type="text/css" href="../css/H5.css">
+	<script type="text/javascript" src='../js/H5.js'></script>
+	<script type="text/javascript" src='../js/H5ComponentBase.js'></script>
+	<link rel="stylesheet" type="text/css" href="../css/H5ComponentBase.css">
+</head>
+<body>
+ <script type="text/javascript">
+ 	$(function(){
+	 	var h5=new H5();
+	 	
+	 	  
+	 	    h5
+	 	.addpage('face')
+	 	    	.addcomponent('logo',{
+	 	    	    type:'base',
+					width:395,
+					height:130,
+					bg:'imgs/face_logo.png',
+					css:{
+						top:100,
+					},
+					animateIn:{opacity:1},
+					animateOut:{opacity:0},
+					center: true,
+                })
+                .addcomponent('slogen',{
+	 	    	    type:'base',
+					width:365,
+					height:99,
+					bg:'imgs/face_slogan.png',
+					css:{
+						top:180,
+					},
+					animateIn:{opacity:1},
+					animateOut:{opacity:0},
+					center: true,
+                })
+                .addcomponent('img_left',{
+	 	    	    type:'base',
+					width:370,
+					height:493,
+					bg:'imgs/face_img_left.png',
+					css:{
+						bottom:0,
+						left:0
+					},
+					animateIn:{opacity:1},
+					animateOut:{opacity:0},
+					
+                })
+                .addcomponent('img_right',{
+	 	    	    type:'base',
+					width:276,
+					height:464,
+					bg:'imgs/face_img_right.png',
+					css:{
+						right:0,
+						bottom:0
+					},
+					animateIn:{opacity:1},
+					animateOut:{opacity:0}	
+                })
+          .addpage()
+	 	    	// .addComponent('caption',{
+	 	    	// 	type:'base',
+	 	    	// 	text:'核心理念'
+	 	    	// })
+	 	    	.addcomponent('caption',{
+	 	    	    type:'base',
+					width:500,
+					height:30,
+					text:'IT教育网=只学有用的',
+					// css:{
+					// 	right:0,
+					// 	bottom:0
+					// },
+					animateIn:{opacity:1},
+					animateOut:{opacity:0},
+					center:true
+                }) 
+	 	
+	 	     
+ 	})
+
+
+ 	
+ </script>
+</body>
+</html>

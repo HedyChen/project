@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>基本图文组件结构</title>
+	<link rel="stylesheet" type="text/css" href="../css/H5ComponentBase.css">
+	<script type="text/javascript" src="../js/lib/jquery.js"></script>
+	<script type="text/javascript" src="../js/H5ComponentBase.js"></script>
+	<script type="text/javascript" src='../js/H5ComponentBar.js'></script>
+	<link rel="stylesheet" type="text/css" href="../css/H5ComponentBar.css">
+	 <style type="text/css">
+    	body{
+    		margin: 0;
+    		padding: 0;
+    		background:#000000;
+    		font-size: 12px;
+    	}
+    	.phone{
+    		width: 340px;
+    		height: 540px;
+    		background: #FFFFFF;
+    		position: absolute;
+    		left: 50%;
+    		top: 50%;
+    		margin: -270px 0 0 -170px;
+    	}
+    </style>
+</head>
+<body>
+<!-- 基本图文组件 -->
+	<div class="phone">
+	</div>
+	<script type="text/javascript">
+	var name='bar';
+	var cfg={
+		type:'bar',
+		width:500,
+		height:800,
+		data:[
+				['JavaScript', .6 ,'#2EFA70'],
+				['HTML/CSS', .4 ,'#F76B6B'],
+				['HTML5', .25 ,'#BF60EE'],
+				['CSS3', .32 ,'#5BF2C3'],
+				['jQuery', .3 ,'#C0FB79'],
+				['Bootstrap', .18 ,'#F29A67']
+		],
+		css:{
+
+			top:200,
+			opacity:0
+		},
+		center: true,
+		animateIn:{opacity:1,
+			left:150},
+		animateOut:{opacity:0,
+			left:100},
+		
+	}
+	var h5=new H5ComponentBar(name,cfg);
+	$('.phone').append(h5);
+	var leave=true;
+	$('body').click(function(){
+		$('.h5_component').trigger(leave?'onload':'onleave');
+		leave=!leave;
+	})
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>基本图文组件结构</title>
+	<link rel="stylesheet" type="text/css" href="../css/H5ComponentBase.css">
+	<script type="text/javascript" src="../js/lib/jquery.js"></script>
+	<script type="text/javascript" src="../js/H5ComponentBase.js"></script>
+	 <style type="text/css">
+    	body{
+    		margin: 0;
+    		padding: 0;
+    		background:#000000;
+    		font-size: 12px;
+    	}
+    	.phone{
+    		width: 340px;
+    		height: 540px;
+    		background: #FFFFFF;
+    		position: absolute;
+    		left: 50%;
+    		top: 50%;
+    		margin: -270px 0 0 -170px;
+    	}
+    </style>
+</head>
+<body>
+<!-- 基本图文组件 -->
+	<div class="phone">
+	</div>
+	<script type="text/javascript">
+	var name='myname';
+	var cfg={
+		type:'base',
+		width:516,
+		height:306,
+		bg:'../imgs/p1_people.png',
+		css:{
+			left:50,
+			top:50,
+			opacity:0
+		},
+		animateIn:{opacity:1,top:100},
+		animateOut:{opacity:0,top:50},
+		center: true,
+		
+	}
+	var h5=new H5ComponentBase(name,cfg);
+	$('.phone').append(h5);
+	var leave = false;
+	$('body').click(function(){
+		$('.h5_component').trigger(leave?'onload':'onleave');
+		leave =! leave;
+	})
+	</script>
+</body>
+</html>

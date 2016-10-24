@@ -1,0 +1,21 @@
+.h5_component_ring{
+	
+	position: absolute;
+}
+.h5_component_ring canvas{
+	width: 100%;
+	height: 100%;
+    position: absolute;
+	top: 0;
+	left: 0;
+	
+}
+.h5_component_ring .text{
+	position: absolute;
+	width: 100%;
+    top: 40%;
+    text-align: center;
+	opacity: 0;
+	transition:all 1s;
+
+}

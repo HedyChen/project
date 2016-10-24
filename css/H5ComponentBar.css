@@ -1,0 +1,54 @@
+
+.h5_component_bar{
+	width: 100%;
+}
+
+.h5_component_bar .line{
+	height: 15px;
+	line-height: 15px;
+	font-size: 12px;
+	margin-bottom: 15px;
+}
+.h5_component_bar .name{
+	width: 60px;
+	float: left;
+	text-align: center;
+	margin-left: 5px;
+	color: #ff7676;
+}
+.h5_component_bar .rate{
+	height: 15px;
+	margin-left: 5px;
+	float: left;
+	position: relative;
+
+}
+.h5_component_bar .rate .bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 100%;
+	border-radius: 2px;
+}
+.h5_component_bar .line .pre{
+	height: 15px;
+	margin-left: 5px;
+	float: left;
+	color:#ff7676;
+	opacity: 0;
+}
+.componet_load .rate .bg{
+	-webkit-transition:all 1s 0.5s;
+	width: 100%;
+}
+.component_leave .rate .bg{
+	width: 0%;
+}
+.componet_load .line .pre{
+	-webkit-transition:all 1s 1.5s;
+	opacity: 1;
+}
+.componet_leave .line .pre{
+	opacity: 0;
+}
